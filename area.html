@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of triangle</title>
+</head>
+<body>
+    <form >
+            <label for="first">First Side:</label>
+            <input type="text" id="first" name="first"><br><br>
+            <label for="second">Second Side:</label>
+            <input type="text" id="second" name="second"><br><br>
+            <label for="third">Third Side:</label>
+            <input type="text" id="third" name="third"><br><br>
+            <button type="sumbit" onclick="area()">The Computed Area</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        
+            var side1 = $("#first").val(); 
+            var side2 = $("#second").val(); 
+            var side3 = $("#third").val(); 
+                function area(){
+                    var s = (side1 + side2 + side3)/2;
+                    var total =  Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)));
+                    document.write(total);
+            }
+    </script>
+</body>
+</html>
